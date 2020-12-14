@@ -1,0 +1,59 @@
+.rpage {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #101d33;
+}
+.register {
+  position: relative;
+  max-width: 350px;
+  min-height: 57%;
+  padding: 1rem;
+  margin: 3rem auto;
+  background: #fff;
+  z-index: 50;
+}
+.form {
+  padding: 0.4rem;
+  margin: auto;
+}
+.register .account-redirect {
+  text-align: center;
+  padding: 15px;
+}
+.link {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #045d79;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.input-control {
+  padding-bottom: 0.4rem;
+  margin: auto;
+  max-width: 350px;
+}
+
+.input {
+  padding-bottom: 0.4rem;
+  margin: auto;
+  max-width: 100%;
+}
+
+ion-input {
+  padding: 0.4rem;
+}
+input:focus {
+  outline: none;
+}
+
+.register-btn {
+  text-align: center;
+  padding: 5px;
+  width: 200px !important;
+  margin-bottom: 15px;
+}
+.register-btn-container {
+  text-align: center;
+}

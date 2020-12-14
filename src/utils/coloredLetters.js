@@ -1,0 +1,31 @@
+import $ from "jquery";
+
+let colors = [
+    "#56fbb5",
+    "#fb7756",
+    "#fb569f",
+    "#FF9966",
+    "#996666",
+    "#00FF00",
+    "#CC9933",
+    "red",
+    "white",
+  ],
+  idx;
+
+export const generateColoredLetter = (id) => {
+  $(function () {
+    let element = $(id);
+    let chars = element.text().split("");
+    element.html("");
+    for (let i = 0; i < chars.length; i++) {
+      idx = Math.floor(Math.random() * colors.length);
+      let span = $("<span>" + chars[i] + "</span>").css("color", colors[idx]);
+      element.append(span);
+    }
+  });
+};
+
+export const styleIconiQ = {
+  fonty: { fontSize: "1.5rem", letterSpacing: "0.3rem", fontWeight: "bold" },
+};

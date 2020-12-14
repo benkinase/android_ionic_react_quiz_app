@@ -1,0 +1,34 @@
+.container {
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 60%;
+  min-height: 50%;
+  background: #46192f;
+  border-radius: 10px;
+  padding: 20px;
+}
+.container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+.container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 5px;
+}
+.container p:nth-child(2) {
+  margin-top: 15px;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.options-buttonContainer {
+  margin-top: 1rem;
+}
+
+button:focus {
+  outline: none;
+}
