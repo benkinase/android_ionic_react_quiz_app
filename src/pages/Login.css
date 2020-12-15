@@ -5,7 +5,6 @@
   height: 100%;
   background-color: var(--custom-background-color);
 }
-
 .login {
   position: relative;
   max-width: 350px;
@@ -40,8 +39,9 @@
 .login-btn {
   text-align: center;
   padding: 5px;
-  width: 200px !important;
-  margin-bottom: 15px;
+  width: 220px !important;
+  margin: 15px 0px;
+  letter-spacing: 0.3rem;
 }
 .login-btn-container {
   text-align: center;
@@ -52,11 +52,13 @@
 }
 .login-btn-container #no-auth {
   text-decoration: none;
-  color: #02999e;
   transition: all 300ms linear;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #51575e;
 }
 .login-btn-container #no-auth:hover {
   text-decoration: underline;
-  color: #09d195;
+  color: #036849;
   cursor: pointer;
 }

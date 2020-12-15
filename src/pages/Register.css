@@ -44,8 +44,9 @@
 .register-btn {
   text-align: center;
   padding: 5px;
-  width: 200px !important;
+  width: 220px !important;
   margin-bottom: 15px;
+  letter-spacing: 0.3rem;
 }
 .register-btn-container {
   text-align: center;

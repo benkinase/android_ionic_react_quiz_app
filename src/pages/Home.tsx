@@ -151,6 +151,7 @@ const Home: React.FC = () => {
 
   //colored letters
   generateColoredLetter(".user");
+  //generateColoredLetter("#no-auth");
   return (
     <IonPage>
       <IonHeader>
@@ -158,7 +159,7 @@ const Home: React.FC = () => {
           {user ? (
             <div className="ion-head">
               <IonTitle>
-                <b>Welcome, {username}</b>
+                <b className="user">Welcome, {username}</b>
               </IonTitle>
               <IonButton className="logout-btn" onClick={() => logout()}>
                 logout
@@ -177,13 +178,9 @@ const Home: React.FC = () => {
       <IonContent fullscreen>
         <div className="home">
           {loading && <p>Loading Questions...</p>}
-
           {number === totalQuestions - 1 ? showSummary : null}
-
           {gameOver && showStart}
-
           {!gameOver && number !== totalQuestions - 1 ? showQuit : null}
-
           {!loading && !gameOver && number !== totalQuestions - 1 ? (
             <QuestionCard
               questionNr={number + 1}
