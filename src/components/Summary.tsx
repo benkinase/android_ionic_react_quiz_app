@@ -4,10 +4,17 @@ import "./Summary.css";
 
 type SummaryProps = {
   userAnswers: Array<any>;
+  score: number;
+  tQ: number;
   goToHome(): any; // no argument
 };
 
-const Summary: React.FC<SummaryProps> = ({ userAnswers, goToHome }) => {
+const Summary: React.FC<SummaryProps> = ({
+  userAnswers,
+  tQ,
+  score,
+  goToHome,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleQuit = () => {
@@ -45,14 +52,19 @@ const Summary: React.FC<SummaryProps> = ({ userAnswers, goToHome }) => {
         );
       })}
       <div className="summary-btns">
+        {!isOpen && (
+          <>
+            <IonButton className="score-modal-btn">
+              Score: {score}/{tQ - 1}
+            </IonButton>
+            <IonButton className="summary-btn" onClick={() => setIsOpen(true)}>
+              See Summary
+            </IonButton>
+          </>
+        )}
         <IonButton className="closs-modal-btn" onClick={handleQuit}>
           End Quiz
         </IonButton>
-        {!isOpen && (
-          <IonButton className="summary-btn" onClick={() => setIsOpen(true)}>
-            See Summary
-          </IonButton>
-        )}
       </div>
     </div>
   );

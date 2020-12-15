@@ -131,7 +131,14 @@ const Home: React.FC = () => {
   );
 
   // Summary component
-  const showSummary = <Summary goToHome={quitQuiz} userAnswers={userAnswers} />;
+  const showSummary = (
+    <Summary
+      goToHome={quitQuiz}
+      userAnswers={userAnswers}
+      score={score}
+      tQ={totalQuestions}
+    />
+  );
   // Quit component
   const showQuit = <QuitQuiz quitQuiz={quitQuiz} score={score} />;
 
