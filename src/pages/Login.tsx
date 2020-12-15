@@ -60,7 +60,7 @@ const Login: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <div className="lpage">
+        <div className="page-login">
           <IonLoading message="logging..." duration={0} isOpen={loading} />
 
           <div className="login">

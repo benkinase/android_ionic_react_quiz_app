@@ -11,6 +11,7 @@ import {
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 // loacal imports
 import { generateColoredLetter, styleIconiQ } from "../utils/coloredLetters";
 import { registerUser } from "../redux/firebaseRequests";
@@ -23,14 +24,20 @@ const Register: React.FC = () => {
   const [password, setPassword] = useState("");
   const [cpassword, setcPassword] = useState("");
 
+  let history = useHistory();
+
   const register = async () => {
+    console.log(email, password, cpassword);
     setLoading(true);
-    if (!email || !password || password !== cpassword) {
+    if (!email || !password || cpassword !== password) {
+      toast("Please supply valid credentials", "danger");
       setLoading(false);
       return;
     }
-    const res = await registerUser(email, password);
+    console.log(email, password, cpassword);
+    const res: any = await registerUser(email, password);
     if (res) {
+      history.replace("/login");
       toast("You have been registered", "success");
     }
     setEmail("");
@@ -51,7 +58,7 @@ const Register: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <div className="rpage">
+        <div className="page-register">
           <IonLoading message="Signing up..." duration={0} isOpen={loading} />
           <div className="register">
             <div className="account-redirect">
@@ -85,7 +92,7 @@ const Register: React.FC = () => {
                   type="password"
                   className="input"
                   value={cpassword}
-                  onChange={(e: any) => setcPassword(e.detail.value)}
+                  onIonChange={(e: any) => setcPassword(e.detail.value)}
                   placeholder="Confirm password"
                 ></IonInput>
               </div>
