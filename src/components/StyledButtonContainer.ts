@@ -17,7 +17,7 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
     cursor: pointer;
     user-select: none;
     font-size: 0.8rem;
-    width: 55%;
+    width: 65%;
     height: 40px;
     margin: 5px 0;
     background: ${({ correct, clicked }) =>
