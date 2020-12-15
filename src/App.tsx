@@ -31,6 +31,7 @@ import { setUserState } from "./redux/Actions";
 const App: React.FC = () => {
   const [loading, setLoading] = React.useState(true);
   const dispatch = useDispatch();
+
   React.useEffect(() => {
     getCurrentUser().then((user: any) => {
       if (user) {
@@ -38,11 +39,14 @@ const App: React.FC = () => {
         dispatch(setUserState(user));
         window.history.replaceState({}, "", "/home");
       } else {
+        // redirect to login
         window.history.replaceState({}, "", "/login");
       }
+      // change loading state
       setLoading(false);
     });
   }, [dispatch]);
+
   return (
     <IonApp>
       {loading ? (

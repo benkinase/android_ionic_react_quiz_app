@@ -34,7 +34,7 @@ let numQuestions: Array<any> = [5, 10, 25, 50, 75, 100];
 const Home: React.FC = () => {
   // redux
   const { user } = useSelector((state: any) => state.auth);
-  const username = user.email?.split("@")[0];
+  const username = user?.email?.split("@")[0];
   // Home states
   const [loading, setLoading] = useState<boolean>(false);
   const [questions, setQuestions] = useState<QuestionsState[]>([]);
@@ -147,14 +147,23 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <div className="ion-head">
-            <IonTitle>
-              <b className="user">Welcome,</b> {username}
-            </IonTitle>
-            <IonButton className="logout-btn" onClick={() => logout()}>
-              SignOut
+          {user ? (
+            <div className="ion-head">
+              <IonTitle>
+                <b>Welcome, {username}</b>
+              </IonTitle>
+              <IonButton className="logout-btn" onClick={() => logout()}>
+                SignOut
+              </IonButton>
+            </div>
+          ) : (
+            <IonButton
+              className="logout-btn"
+              onClick={() => history.push("/login")}
+            >
+              Go Back
             </IonButton>
-          </div>
+          )}
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

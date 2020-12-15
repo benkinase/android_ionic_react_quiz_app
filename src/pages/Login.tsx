@@ -12,7 +12,7 @@ import "./Login.css";
 
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 
 // local imports
@@ -22,6 +22,8 @@ import { toast } from "../toast";
 import { generateColoredLetter, styleIconiQ } from "../utils/coloredLetters";
 
 const Login: React.FC = () => {
+  const { user } = useSelector((state: any) => state.auth);
+
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -53,7 +55,7 @@ const Login: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle style={styleIconiQ.fonty}>
-            <div id="iconiq-l">iconiQ</div>
+            <div id="iconiq-l">IconiQ</div>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
@@ -98,6 +100,7 @@ const Login: React.FC = () => {
               >
                 Login
               </IonButton>
+              <Link to={!user ? "/home" : ""}>!Account? Enter</Link>
             </div>
           </div>
         </div>

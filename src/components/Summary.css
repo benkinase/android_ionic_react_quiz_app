@@ -7,7 +7,6 @@
   background: rgb(255, 255, 255);
   color: rgb(13, 114, 182);
   padding: 0.3rem;
-  font-style: italic;
   border-radius: 5px;
   line-height: 1.2rem;
   transition: all 300ms linear;
@@ -29,5 +28,5 @@
   color: #0fdb20;
 }
 .no {
-  color: #f10e0e;
+  color: #fc0808;
 }

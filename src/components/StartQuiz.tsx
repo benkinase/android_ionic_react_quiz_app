@@ -37,9 +37,7 @@ const StartQuiz: React.FC<StartProps> = ({
   return (
     <div className="start-container">
       <h1 id="ioniq">IconiQ</h1>
-      <h4>
-        Select questions<span>(n)</span>and level to proceed!
-      </h4>
+      <h4>Select questions and level to proceed!</h4>
       <div className="ion-flex">
         <IonItem>
           <IonLabel>Questions</IonLabel>

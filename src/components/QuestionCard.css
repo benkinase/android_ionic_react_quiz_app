@@ -3,26 +3,31 @@
   text-align: center;
   max-width: 60%;
   min-height: 50%;
-  background: #46192f;
+  background: #d5e3f3;
   border-radius: 10px;
   padding: 20px;
 }
-.container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+
 .container p {
   font-size: 16px;
   line-height: 22px;
-  color: #8c8c8c;
   margin: 5px;
+}
+.container p:nth-child(1) {
+  font-size: 18px;
+  color: #062764 !important;
 }
 .container p:nth-child(2) {
   margin-top: 15px;
+  color: #07367e;
 }
-
-.container a {
-  text-decoration: none;
+.container btn {
+  color: linear-gradient(90deg, #27fc8a, #0fa553);
+  color: linear-gradient(90deg, #ff0000, #990808);
+  color: linear-gradient(90deg, #04034b, #022e47);
+  border: none;
+  box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
+  color: #faf3db;
 }
 
 .options-buttonContainer {
