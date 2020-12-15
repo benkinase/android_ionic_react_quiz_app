@@ -31,9 +31,6 @@ const StartQuiz: React.FC<StartProps> = ({
     cssClass: "my-custom-interface",
   };
 
-  let letters = document.querySelector("#ioniq")?.innerHTML;
-
-  console.log(letters);
   return (
     <div className="start-container">
       <h1 id="ioniq">IconiQ</h1>
@@ -72,11 +69,11 @@ const StartQuiz: React.FC<StartProps> = ({
             })}
           </IonSelect>
         </IonItem>
-        {level && numQuestions ? (
+        {level && numQuestions && (
           <IonButton size="large" className="start-btn" onClick={start}>
             {"Start QUIZ"}
           </IonButton>
-        ) : null}
+        )}
       </div>
     </div>
   );

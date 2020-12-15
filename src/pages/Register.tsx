@@ -46,7 +46,7 @@ const Register: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle style={styleIconiQ.fonty}>
-            <div id="iconiq-r">IconiQ</div>
+            <div id="iconiq-r">iconiQ</div>
           </IonTitle>
         </IonToolbar>
       </IonHeader>

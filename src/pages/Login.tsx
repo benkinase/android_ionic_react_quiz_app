@@ -55,7 +55,7 @@ const Login: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle style={styleIconiQ.fonty}>
-            <div id="iconiq-l">IconiQ</div>
+            <div id="iconiq-l">iconiQ</div>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
@@ -100,7 +100,9 @@ const Login: React.FC = () => {
               >
                 Login
               </IonButton>
-              <Link to={!user ? "/home" : ""}>!Account? Enter</Link>
+              <Link to={!user ? "/home" : ""} id="no-auth">
+                !Account && Enter
+              </Link>
             </div>
           </div>
         </div>

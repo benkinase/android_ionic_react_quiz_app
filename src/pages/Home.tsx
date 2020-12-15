@@ -54,6 +54,7 @@ const Home: React.FC = () => {
     await logoutUser();
     dispatch(resetUserState());
     history.push("/login");
+    window.location.reload();
     toast("Logout successful", "success");
   };
 
@@ -113,7 +114,7 @@ const Home: React.FC = () => {
     setTotalQuestions(0);
     setUserAnswers([]);
     setLevel("");
-    window.location.reload(false);
+    window.location.reload();
   };
 
   // start component
@@ -129,12 +130,12 @@ const Home: React.FC = () => {
     />
   );
 
-  // summary component
+  // Summary component
   const showSummary = <Summary goToHome={quitQuiz} userAnswers={userAnswers} />;
-  // show quit button and score board JSX
+  // Quit component
   const showQuit = <QuitQuiz quitQuiz={quitQuiz} score={score} />;
 
-  // next button JSX
+  // call next question fn
   const callNextQ = () => {
     setTimeout(() => {
       nextQuestion();
@@ -153,15 +154,15 @@ const Home: React.FC = () => {
                 <b>Welcome, {username}</b>
               </IonTitle>
               <IonButton className="logout-btn" onClick={() => logout()}>
-                SignOut
+                logout
               </IonButton>
             </div>
           ) : (
             <IonButton
-              className="logout-btn"
+              className="logout-btn no-auth"
               onClick={() => history.push("/login")}
             >
-              Go Back
+              go back
             </IonButton>
           )}
         </IonToolbar>
