@@ -26,13 +26,13 @@ const Summary: React.FC<SummaryProps> = ({ userAnswers, goToHome }) => {
                 {item.question}
               </div>
               <div className="your-answer">
-                <b>Your Answer: </b>
+                <b>You: </b>
                 {item.answer}
               </div>
               <div
                 className={item.correctAnswer === item.answer ? "yes" : "no"}
               >
-                <b>Got it?: </b>
+                <b>Correct?: </b>
                 {item.correctAnswer === item.answer ? "Yes" : "No"}
               </div>
               {item.correctAnswer !== item.answer && (

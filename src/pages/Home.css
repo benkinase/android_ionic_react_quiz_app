@@ -1,5 +1,5 @@
 :root {
-  --custom-background-color: #152031;
+  --custom-background-color: #1d2b42;
 }
 
 .ion-head {
@@ -26,12 +26,12 @@
 ion-toolbar {
   --color: #ffffff;
 }
+ion-header {
+  --ion-background-color: var(--custom-background-color);
+}
 /**remove box shadow*/
 ion-header.header-md:after {
   background: none;
-}
-ion-header {
-  --ion-background-color: #101d33;
 }
 
 ion-button {

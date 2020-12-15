@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonContainer } from "./StyledComponents";
+import { ButtonContainer } from "./StyledButtonContainer";
 // Types
 import { AnswerObject } from "../pages/Home";
 import "./QuestionCard.css";

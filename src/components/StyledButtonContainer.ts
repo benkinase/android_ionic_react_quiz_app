@@ -29,7 +29,7 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
     border: none;
     outline: none;
     box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
-    color: #faf3db;
+    color: #fcfcfc;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
     &:focus: {
       outline: none;
