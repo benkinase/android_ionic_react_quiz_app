@@ -20,7 +20,6 @@ import { toast } from "../toast";
 import Summary from "../components/Summary";
 import QuitQuiz from "../components/QuitQuiz";
 import StartQuiz from "../components/StartQuiz";
-import { generateColoredLetter } from "../utils/coloredLetters";
 
 export type AnswerObject = {
   question: string;
@@ -149,9 +148,6 @@ const Home: React.FC = () => {
     }, 500);
   };
 
-  //colored letters
-  //generateColoredLetter(".user");
-  //generateColoredLetter("#no-auth");
   return (
     <IonPage>
       <IonHeader>
