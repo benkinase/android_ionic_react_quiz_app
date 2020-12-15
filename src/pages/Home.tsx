@@ -150,7 +150,7 @@ const Home: React.FC = () => {
   };
 
   //colored letters
-  generateColoredLetter(".user");
+  //generateColoredLetter(".user");
   //generateColoredLetter("#no-auth");
   return (
     <IonPage>
