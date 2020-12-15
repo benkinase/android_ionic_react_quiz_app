@@ -25,7 +25,7 @@
 .link {
   margin-left: 10px;
   text-decoration: none;
-  color: #045d79;
+  color: #017699;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -45,7 +45,7 @@
   text-align: center;
   padding: 5px;
   width: 220px !important;
-  margin-bottom: 15px;
+  margin: 15px 0px;
   letter-spacing: 0.3rem;
 }
 .register-btn-container {
