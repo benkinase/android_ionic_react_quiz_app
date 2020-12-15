@@ -34,7 +34,7 @@
 
 ::placeholder {
   --placeholder-color: #72a9b9;
-  --placeholder-opacity: 0.3;
+  --placeholder-opacity: 0.5;
 }
 .login-btn {
   text-align: center;

@@ -44,7 +44,7 @@ ion-item {
 ion-input {
   --padding-top: 0.4rem;
   --color: #034436 !important;
-  --background: rgba(4, 33, 94, 0.2) !important;
+  --background: rgba(189, 193, 194, 0.3) !important;
 }
 ion-input {
   padding: 0.4rem;
@@ -102,7 +102,7 @@ input:focus {
 }
 .start-container h4 {
   text-align: center;
-  color: #fa8d11;
+  color: #29cdff;
 }
 
 .ion-flex {
