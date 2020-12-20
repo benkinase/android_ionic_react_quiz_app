@@ -53,59 +53,61 @@ const Register: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle style={styleIconiQ.fonty}>
-            <div id="iconiq-r">iconiQ</div>
+            <div id='iconiq-r'>iconiQ</div>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <div className="page-register">
-          <IonLoading message="Signing up..." duration={0} isOpen={loading} />
-          <div className="register">
-            <div className="account-redirect">
-              <span>Already have Account? </span>
-              <Link className="link" to={"/login"}>
-                Login
-              </Link>
-            </div>
+        <div className='page-register'>
+          <IonLoading message='Signing up...' duration={0} isOpen={loading} />
+          <div className='register'>
+            <div className='register-content'>
+              <div className='redirect'>
+                <span>Already have Account? </span>
+                <Link className='link' to={"/login"}>
+                  Login
+                </Link>
+              </div>
 
-            <div className="form">
-              <div className="input-control">
-                <IonInput
-                  type="text"
-                  value={email}
-                  className="input"
-                  placeholder="Enter Email"
-                  onIonChange={(e: any) => setEmail(e.detail.value)}
-                ></IonInput>
+              <div className='form'>
+                <div className='input-control'>
+                  <IonInput
+                    type='text'
+                    value={email}
+                    className='input'
+                    placeholder='Enter Email'
+                    onIonChange={(e: any) => setEmail(e.detail.value)}
+                  ></IonInput>
+                </div>
+                <div className='input-control'>
+                  <IonInput
+                    type='password'
+                    value={password}
+                    className='input'
+                    placeholder='Enter Password'
+                    onIonChange={(e: any) => setPassword(e.detail.value)}
+                  ></IonInput>
+                </div>
+                <div className='input-control'>
+                  <IonInput
+                    type='password'
+                    className='input'
+                    value={cpassword}
+                    onIonChange={(e: any) => setcPassword(e.detail.value)}
+                    placeholder='Confirm password'
+                  ></IonInput>
+                </div>
               </div>
-              <div className="input-control">
-                <IonInput
-                  type="password"
-                  value={password}
-                  className="input"
-                  placeholder="Enter Password"
-                  onIonChange={(e: any) => setPassword(e.detail.value)}
-                ></IonInput>
+              <div className='register-btn-container'>
+                <IonButton
+                  size='large'
+                  className='register-btn'
+                  color='secondary'
+                  onClick={register}
+                >
+                  Signup
+                </IonButton>
               </div>
-              <div className="input-control">
-                <IonInput
-                  type="password"
-                  className="input"
-                  value={cpassword}
-                  onIonChange={(e: any) => setcPassword(e.detail.value)}
-                  placeholder="Confirm password"
-                ></IonInput>
-              </div>
-            </div>
-            <div className="register-btn-container">
-              <IonButton
-                size="large"
-                className="register-btn"
-                color="secondary"
-                onClick={register}
-              >
-                Signup
-              </IonButton>
             </div>
           </div>
         </div>

@@ -14,15 +14,21 @@
   background: #fff;
   z-index: 50;
 }
+
+.register-content {
+  margin: 25px 0px;
+}
 .form {
   padding: 0.4rem;
   margin: auto;
 }
-.register .account-redirect {
-  text-align: center;
+.register .redirect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 15px;
 }
-.link {
+.register .link {
   margin-left: 10px;
   text-decoration: none;
   color: #017699;

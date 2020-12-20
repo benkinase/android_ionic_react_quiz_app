@@ -14,8 +14,13 @@
   background: #fff;
   z-index: 50;
 }
+.login-content {
+  margin: 23px 0px;
+}
 .login .redirect {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 15px;
 }
 .login .link- {
@@ -36,13 +41,7 @@
   --placeholder-color: #72a9b9;
   --placeholder-opacity: 0.5;
 }
-.login-btn {
-  text-align: center;
-  padding: 5px;
-  width: 220px !important;
-  margin: 15px 0px;
-  letter-spacing: 0.3rem;
-}
+
 .login-btn-container {
   text-align: center;
   display: flex;
@@ -56,9 +55,19 @@
   font-size: 1rem;
   font-weight: bold;
   color: #065f7a;
+  background-color: #d0dadd;
+  padding: 5px 25px;
 }
 .login-btn-container #no-auth:hover {
   text-decoration: underline;
   color: #017699;
   cursor: pointer;
+}
+
+.login-btn {
+  text-align: center;
+  padding: 5px;
+  width: 220px !important;
+  margin: 15px 0px;
+  letter-spacing: 0.3rem;
 }

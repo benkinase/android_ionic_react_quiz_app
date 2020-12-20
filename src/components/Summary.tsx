@@ -23,16 +23,16 @@ const Summary: React.FC<SummaryProps> = ({
   };
 
   return (
-    <div className="summary">
+    <div className='summary'>
       {userAnswers.map((item) => {
         return (
           isOpen && (
-            <div className="summary-content">
-              <div className="question">
+            <div className='summary-content'>
+              <div className='question'>
                 <b>Question: </b>
                 {item.question}
               </div>
-              <div className="your-answer">
+              <div className='your-answer'>
                 <b>You: </b>
                 {item.answer}
               </div>
@@ -40,10 +40,10 @@ const Summary: React.FC<SummaryProps> = ({
                 className={item.correctAnswer === item.answer ? "yes" : "no"}
               >
                 <b>Correct?: </b>
-                {item.correctAnswer === item.answer ? "Yes" : "No"}
+                {item.correctAnswer === item.answer ? true : false}
               </div>
               {item.correctAnswer !== item.answer && (
-                <div className="correct-answer">
+                <div className='correct-answer'>
                   <b>Correct Answer: </b> {item.correctAnswer}
                 </div>
               )}
@@ -51,18 +51,18 @@ const Summary: React.FC<SummaryProps> = ({
           )
         );
       })}
-      <div className="summary-btns">
+      <div className='summary-btns'>
         {!isOpen && (
           <>
-            <IonButton className="score-modal-btn">
+            <IonButton className='score-modal-btn'>
               Score: {score}/{tQ - 1}
             </IonButton>
-            <IonButton className="summary-btn" onClick={() => setIsOpen(true)}>
+            <IonButton className='summary-btn' onClick={() => setIsOpen(true)}>
               See Summary
             </IonButton>
           </>
         )}
-        <IonButton className="closs-modal-btn" onClick={handleQuit}>
+        <IonButton className='closs-modal-btn' onClick={handleQuit}>
           End Quiz
         </IonButton>
       </div>

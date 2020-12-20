@@ -1,7 +1,9 @@
 :root {
-  --custom-background-color: #1d2b42;
+  --custom-background-color: #133644;
 }
-
+::selection {
+  color: yellow;
+}
 .ion-head {
   display: flex;
   align-items: center;
@@ -10,7 +12,7 @@
 .ion-head .logout-btn {
   padding: 1px !important;
   margin-right: 10px !important;
-  --color: #f18b06 !important;
+  --color: #f1067b !important;
 }
 .ion-head .user {
   letter-spacing: 0.3rem;

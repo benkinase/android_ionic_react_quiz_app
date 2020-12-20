@@ -55,54 +55,56 @@ const Login: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle style={styleIconiQ.fonty}>
-            <div id="iconiq-l">iconiQ</div>
+            <div id='iconiq-l'>iconiQ</div>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <div className="page-login">
-          <IonLoading message="logging..." duration={0} isOpen={loading} />
+        <div className='page-login'>
+          <IonLoading message='logging...' duration={0} isOpen={loading} />
 
-          <div className="login">
-            <div className="redirect">
-              <span>No Account?</span>
-              <Link to={"/register"} className="link-">
-                Register
-              </Link>
-            </div>
+          <div className='login'>
+            <div className='login-content'>
+              <div className='redirect'>
+                <span>No Account?</span>
+                <Link to={"/register"} className='link-'>
+                  Register
+                </Link>
+              </div>
 
-            <div className="form">
-              <div className="input-control">
-                <IonInput
-                  type="text"
-                  value={email}
-                  className="input"
-                  placeholder="Enter Email"
-                  onIonChange={(e: any) => setEmail(e.detail.value)}
-                ></IonInput>
+              <div className='form'>
+                <div className='input-control'>
+                  <IonInput
+                    type='text'
+                    value={email}
+                    className='input'
+                    placeholder='Enter Email'
+                    onIonChange={(e: any) => setEmail(e.detail.value)}
+                  ></IonInput>
+                </div>
+                <div className='input-control'>
+                  <IonInput
+                    type='password'
+                    value={password}
+                    className='input'
+                    placeholder='Enter Password'
+                    onIonChange={(e: any) => setPassword(e.detail.value)}
+                  ></IonInput>
+                </div>
               </div>
-              <div className="input-control">
-                <IonInput
-                  type="password"
-                  value={password}
-                  className="input"
-                  placeholder="Enter Password"
-                  onIonChange={(e: any) => setPassword(e.detail.value)}
-                ></IonInput>
+              <div className='login-btn-container'>
+                <IonButton
+                  className='login-btn'
+                  color='secondary'
+                  size='large'
+                  onClick={login}
+                >
+                  Login
+                </IonButton>
+                <Link to={!user ? "/home" : ""} id='no-auth'>
+                  Quiz without account
+                </Link>
               </div>
-            </div>
-            <div className="login-btn-container">
-              <IonButton
-                className="login-btn"
-                color="secondary"
-                size="large"
-                onClick={login}
-              >
-                Login
-              </IonButton>
-              <Link to={!user ? "/home" : ""} id="no-auth">
-                !Account && Enter
-              </Link>
             </div>
           </div>
         </div>
