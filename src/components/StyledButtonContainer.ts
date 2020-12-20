@@ -25,7 +25,7 @@ export const ButtonContainer = styled.div<ButtonContainerProps>`
         ? "linear-gradient(90deg, #27fc8a, #0fa553)"
         : !correct && clicked
         ? "linear-gradient(90deg, #ff0000, #990808)"
-        : "linear-gradient(90deg, #04034b, #022e47)"};
+        : "linear-gradient(90deg, #063a6b, #046d8d)"};
     border: none;
     outline: none;
     box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);

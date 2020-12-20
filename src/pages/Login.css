@@ -54,13 +54,13 @@
   transition: all 300ms linear;
   font-size: 1rem;
   font-weight: bold;
-  color: #065f7a;
+  color: #e9900a;
   background-color: #d0dadd;
   padding: 5px 25px;
 }
 .login-btn-container #no-auth:hover {
   text-decoration: underline;
-  color: #017699;
+  color: #bd5c0d;
   cursor: pointer;
 }
 

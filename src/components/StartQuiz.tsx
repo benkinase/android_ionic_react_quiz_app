@@ -9,7 +9,7 @@ import {
 
 type setLevelFunctionType = (level: string) => any; //string argument
 interface StartProps {
-  start: () => void;
+  startIconic: () => void;
   Difficulty: Array<string>;
   numQuestions: Array<number>;
   setLevel: setLevelFunctionType; // type declared above
@@ -19,7 +19,7 @@ interface StartProps {
 }
 
 const StartQuiz: React.FC<StartProps> = ({
-  start,
+  startIconic,
   Difficulty,
   numQuestions,
   totalQuestions,
@@ -32,10 +32,10 @@ const StartQuiz: React.FC<StartProps> = ({
   };
 
   return (
-    <div className="start-container">
-      <h1 id="ioniq">IconiQ</h1>
+    <div className='start-container'>
+      <h1 id='ioniq'>IconiQ</h1>
       <h4>Select n-questions and level to proceed!</h4>
-      <div className="ion-flex">
+      <div className='ion-flex'>
         <IonItem>
           <IonLabel>Questions</IonLabel>
           <IonSelect
@@ -69,8 +69,8 @@ const StartQuiz: React.FC<StartProps> = ({
             })}
           </IonSelect>
         </IonItem>
-        {level && numQuestions && (
-          <IonButton size="large" className="start-btn" onClick={start}>
+        {numQuestions && level && (
+          <IonButton size='large' className='start-btn' onClick={startIconic}>
             {"Start QUIZ"}
           </IonButton>
         )}

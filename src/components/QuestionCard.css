@@ -21,19 +21,20 @@
   margin-top: 15px;
   color: #07367e;
 }
-.container btn {
-  color: linear-gradient(90deg, #27fc8a, #0fa553);
-  color: linear-gradient(90deg, #ff0000, #990808);
-  color: linear-gradient(90deg, #04034b, #022e47);
-  border: none;
-  box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
-  color: #fcfcfc;
-}
-
 .options-buttonContainer {
   margin-top: 1rem;
 }
 
 button:focus {
   outline: none;
+}
+
+/* for styledbutton component*/
+.container btn {
+  background: linear-gradient(90deg, #27fc8a, #0fa553);
+  background: linear-gradient(90deg, #ff0000, #990808);
+  background: linear-gradient(90deg, #063a6b, #046d8d);
+  border: none;
+  box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
+  color: #fcfcfc;
 }

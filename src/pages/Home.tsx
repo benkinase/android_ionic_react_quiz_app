@@ -119,7 +119,7 @@ const Home: React.FC = () => {
   // start component
   const showStart = (
     <StartQuiz
-      start={startIconic}
+      startIconic={startIconic}
       Difficulty={Difficulty}
       numQuestions={numQuestions}
       setLevel={setLevel}
@@ -153,17 +153,17 @@ const Home: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           {user ? (
-            <div className="ion-head">
+            <div className='ion-head'>
               <IonTitle>
-                <b className="user">Welcome, {username}</b>
+                <b className='user'>Welcome, {username}</b>
               </IonTitle>
-              <IonButton className="logout-btn" onClick={() => logout()}>
+              <IonButton className='logout-btn' onClick={() => logout()}>
                 logout
               </IonButton>
             </div>
           ) : (
             <IonButton
-              className="logout-btn no-auth"
+              className='logout-btn no-auth'
               onClick={() => history.push("/login")}
             >
               go back
@@ -172,7 +172,7 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <div className="home">
+        <div className='home'>
           {loading && <p>Loading Questions...</p>}
           {number === totalQuestions - 1 ? showSummary : null}
           {gameOver && showStart}

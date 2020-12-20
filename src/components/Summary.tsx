@@ -40,7 +40,7 @@ const Summary: React.FC<SummaryProps> = ({
                 className={item.correctAnswer === item.answer ? "yes" : "no"}
               >
                 <b>Correct?: </b>
-                {item.correctAnswer === item.answer ? true : false}
+                {item.correctAnswer === item.answer ? "True" : "False"}
               </div>
               {item.correctAnswer !== item.answer && (
                 <div className='correct-answer'>
