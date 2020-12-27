@@ -13,7 +13,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 // loacal imports
-import { generateColoredLetter, styleIconiQ } from "../utils/coloredLetters";
+import { ColoredLetter, styleIconiQ } from "../utils/coloredLetters";
 import { registerUser } from "../redux/firebaseRequests";
 import { toast } from "../toast";
 import "./Register.css";
@@ -46,7 +46,7 @@ const Register: React.FC = () => {
   };
 
   //randomly colored letters
-  generateColoredLetter("#iconiq-r");
+  ColoredLetter("#iconiq-r");
 
   return (
     <IonPage>

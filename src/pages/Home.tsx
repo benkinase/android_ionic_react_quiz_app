@@ -163,7 +163,7 @@ const Home: React.FC = () => {
             </div>
           ) : (
             <IonButton
-              className='logout-btn no-auth'
+              className='logout-btn go-back'
               onClick={() => history.push("/login")}
             >
               go back

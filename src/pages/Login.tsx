@@ -23,7 +23,7 @@ import {
 } from "../redux/firebaseRequests";
 import { setUserState } from "../redux/Actions";
 import { toast } from "../toast";
-import { styleIconiQ } from "../utils/coloredLetters";
+import { ColoredLetter, styleIconiQ } from "../utils/coloredLetters";
 
 const Login: React.FC = () => {
   const { user } = useSelector((state: any) => state.auth);
@@ -52,6 +52,7 @@ const Login: React.FC = () => {
     setPassword("");
     setLoading(false);
   };
+
   const handleGoogleSignIn = async () => {
     const res: any = await signInWithGoogle();
     if (res) {
@@ -68,7 +69,8 @@ const Login: React.FC = () => {
       toast("You have logged in", "success");
     }
   };
-
+  //randomly colored letters
+  ColoredLetter("#iconiq-l");
   return (
     <IonPage>
       <IonHeader>

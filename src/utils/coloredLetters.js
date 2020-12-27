@@ -19,7 +19,7 @@ let colors = [
   ],
   idx;
 
-export const generateColoredLetter = (id) => {
+export const ColoredLetter = (id) => {
   $(function () {
     let element = $(id);
     let chars = element.text().split("");

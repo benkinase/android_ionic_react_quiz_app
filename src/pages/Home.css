@@ -2,7 +2,7 @@
   --custom-background-color: #133644;
 }
 ::selection {
-  color: yellow;
+  color: rgb(241, 15, 166);
 }
 .ion-head {
   display: flex;
@@ -12,14 +12,14 @@
 .ion-head .logout-btn {
   padding: 1px !important;
   margin-right: 10px !important;
-  --color: #f1067b !important;
+  --color: #f7d2fa !important;
 }
 .ion-head .user {
   letter-spacing: 0.3rem;
   font-weight: bold;
 }
 
-.no-auth {
+.go-back {
   margin-left: 10px !important;
   --color: #f5b056 !important;
 }
@@ -59,7 +59,7 @@ input:focus {
 }
 
 ::placeholder {
-  --placeholder-color: #04a0cf;
+  --placeholder-color: #060a47;
   --placeholder-opacity: 0.5;
 }
 .input {
