@@ -16,10 +16,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 
 // local imports
-import { loginUser } from "../redux/firebaseRequests";
+import {
+  loginUser,
+  signInWithGoogle,
+  signInWithGithub,
+} from "../redux/firebaseRequests";
 import { setUserState } from "../redux/Actions";
 import { toast } from "../toast";
-import { generateColoredLetter, styleIconiQ } from "../utils/coloredLetters";
+import { styleIconiQ } from "../utils/coloredLetters";
 
 const Login: React.FC = () => {
   const { user } = useSelector((state: any) => state.auth);
@@ -48,7 +52,22 @@ const Login: React.FC = () => {
     setPassword("");
     setLoading(false);
   };
-  generateColoredLetter("#iconiq-l");
+  const handleGoogleSignIn = async () => {
+    const res: any = await signInWithGoogle();
+    if (res) {
+      dispatch(setUserState(res.user));
+      history.replace("/home");
+      toast("You have logged in", "success");
+    }
+  };
+  const handleGithubSignIn = async () => {
+    const res: any = await signInWithGithub();
+    if (res) {
+      dispatch(setUserState(res.user));
+      history.replace("/home");
+      toast("You have logged in", "success");
+    }
+  };
 
   return (
     <IonPage>
@@ -65,13 +84,25 @@ const Login: React.FC = () => {
 
           <div className='login'>
             <div className='login-content'>
-              <div className='redirect'>
-                <span>No Account?</span>
-                <Link to={"/register"} className='link-'>
-                  Register
-                </Link>
+              <div className='buttons social'>
+                <IonButton
+                  className='login-btn google'
+                  color='secondary'
+                  size='large'
+                  onClick={() => handleGoogleSignIn()}
+                >
+                  Google-login
+                </IonButton>
+                <IonButton
+                  className='login-btn github'
+                  color='secondary'
+                  size='large'
+                  onClick={() => handleGithubSignIn()}
+                >
+                  Github-login
+                </IonButton>
               </div>
-
+              <p className='or'>oder</p>
               <div className='form'>
                 <div className='input-control'>
                   <IonInput
@@ -91,18 +122,25 @@ const Login: React.FC = () => {
                     onIonChange={(e: any) => setPassword(e.detail.value)}
                   ></IonInput>
                 </div>
+
+                <div className='buttons'>
+                  <IonButton
+                    className='login-btn'
+                    color='secondary'
+                    size='large'
+                    onClick={login}
+                  >
+                    Login
+                  </IonButton>
+                  <Link to={!user ? "/home" : ""} id='no-auth'>
+                    Quiz without account
+                  </Link>
+                </div>
               </div>
-              <div className='login-btn-container'>
-                <IonButton
-                  className='login-btn'
-                  color='secondary'
-                  size='large'
-                  onClick={login}
-                >
-                  Login
-                </IonButton>
-                <Link to={!user ? "/home" : ""} id='no-auth'>
-                  Quiz without account
+              <div className='redirect'>
+                <span>No Account?</span>
+                <Link to={"/register"} className='link-'>
+                  Register
                 </Link>
               </div>
             </div>

@@ -64,3 +64,25 @@ export async function logoutUser() {
     toast(error.message, "danger");
   }
 }
+
+// external Authentication
+
+export const gg_provider = new firebase.auth.GoogleAuthProvider();
+export const gh_provider = new firebase.auth.GithubAuthProvider();
+
+export const signInWithGoogle = async () => {
+  try {
+    const res = await firebase.auth().signInWithPopup(gg_provider);
+    return res;
+  } catch (error) {
+    toast(error.message, "danger");
+  }
+};
+export const signInWithGithub = async () => {
+  try {
+    const res = await firebase.auth().signInWithPopup(gh_provider);
+    return res;
+  } catch (error) {
+    toast(error.message, "danger");
+  }
+};

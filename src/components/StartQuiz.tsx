@@ -8,6 +8,7 @@ import {
 } from "@ionic/react";
 
 type setLevelFunctionType = (level: string) => any; //string argument
+
 interface StartProps {
   startIconic: () => void;
   Difficulty: Array<string>;

@@ -45,8 +45,8 @@ ion-item {
 
 ion-input {
   --padding-top: 0.4rem;
-  --color: #034436 !important;
-  --background: rgba(189, 193, 194, 0.3) !important;
+  --color: #054638 !important;
+  --background: rgba(159, 177, 182, 0.3) !important;
 }
 ion-input {
   padding: 0.4rem;
@@ -56,6 +56,16 @@ input {
 }
 input:focus {
   outline: none;
+}
+
+::placeholder {
+  --placeholder-color: #04a0cf;
+  --placeholder-opacity: 0.5;
+}
+.input {
+  padding-bottom: 0.4rem;
+  margin: auto;
+  width: 94%;
 }
 
 /*home*/

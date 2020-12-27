@@ -17,6 +17,13 @@
 .login-content {
   margin: 23px 0px;
 }
+
+.or {
+  text-align: center;
+}
+.login .form {
+  margin-top: 15px;
+}
 .login .redirect {
   display: flex;
   align-items: center;
@@ -37,37 +44,39 @@
   margin-bottom: 0.5rem !important;
 }
 
-::placeholder {
-  --placeholder-color: #72a9b9;
-  --placeholder-opacity: 0.5;
-}
-
-.login-btn-container {
+.login .buttons {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.login-btn-container #no-auth {
+.login .buttons.social {
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  text-align: center;
+  padding: 10px;
+  width: 100% !important;
+  margin: 2px 0px;
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem !important;
+  border-radius: none !important;
+}
+.login .buttons #no-auth {
   text-decoration: none;
   transition: all 300ms linear;
   font-size: 1rem;
   font-weight: bold;
   color: #e9900a;
   background-color: #d0dadd;
-  padding: 5px 25px;
+  padding: 5px 0px;
+  width: 93% !important;
 }
-.login-btn-container #no-auth:hover {
+
+.buttons #no-auth:hover {
   text-decoration: underline;
   color: #bd5c0d;
   cursor: pointer;
-}
-
-.login-btn {
-  text-align: center;
-  padding: 5px;
-  width: 220px !important;
-  margin: 15px 0px;
-  letter-spacing: 0.3rem;
 }

@@ -18,7 +18,7 @@
 .register-content {
   margin: 25px 0px;
 }
-.form {
+.register .form {
   padding: 0.4rem;
   margin: auto;
 }
@@ -35,16 +35,10 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
-.input-control {
+.register .input-control {
   padding-bottom: 0.4rem;
   margin: auto;
   max-width: 350px;
-}
-
-.input {
-  padding-bottom: 0.4rem;
-  margin: auto;
-  max-width: 100%;
 }
 
 .register-btn {
